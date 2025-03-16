@@ -1,12 +1,54 @@
-# React + Vite
+## Package Manager
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The preferred package manager is [pnpm](https://npm.io/). Do not use any other package manager.
 
-Currently, two official plugins are available:
+## Installation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```bash
+npm install
+```
 
-## Expanding the ESLint configuration
+#### NOTE: IF YOU WANT TO INSTALL ANY ADDITIONAL PACKAGE YOU MUST NAVIGATE TO THE SPECIFIC APP AND INSTALL IT THERE. KEEP THE VERSION CONSISTENT ACROSS ALL APPS
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm add <package-name>
+```
+
+## Adding components
+
+To add components to your app, run the following command at the root of your  app:
+
+```bash
+npm install
+```
+
+## Tailwind
+
+Your `tailwind.config.ts` and `globals.css` are already set up to use the components from the `ui` package.
+
+## Using components
+
+```jsx
+import { Button } from '@workspace/ui/components/button';
+```
+
+## Environment Variables
+
+Each app has its own environment variables. In order to run the apps in development mode, you must set the environment variables in the **.env** file.
+
+## Eslint and Prettier
+
+- This project uses [Eslint](https://eslint.org/)
+- Common Eslint Config are being used for all apps, please refer to the [eslint-config](https://github.com/CoreViva/coreviva-fe/blob/28cd4102cd73fdd4d1f31869dd5319a7c6719d71/packages/eslint-config/index.js)
+
+## Linting
+
+```bash
+npm lint
+```
+
+## Building
+
+```bash
+npm build
+```
