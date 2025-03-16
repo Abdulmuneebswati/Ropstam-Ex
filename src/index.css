@@ -1,0 +1,60 @@
+@import 'tailwindcss';
+
+@font-face {
+  font-family: 'sans serif';
+  src: url('./assets/fonts/CabinetGrotesk-Variable.ttf');
+}
+
+@font-face {
+  font-family: 'Frank Ruhl Libre';
+  src: url('./assets/fonts/FrankRuhlLibre.ttf');
+}
+@theme {
+  --font-grotsek: sans serif;
+  --font-frank: Frank Ruhl Libre;
+}
+
+:root {
+  --white: #ffffff;
+  --foreground: #49c7ab;
+  --kprimary: #1e293b;
+  --primary: #475569;
+  --black: #000000;
+}
+
+@layer base {
+  body {
+    @apply font-grotsek bg-white;
+  }
+}
+
+@layer utilities {
+  .bg-foreground {
+    background-color: var(--foreground);
+  }
+  .text-foreground {
+    color: var(--foreground);
+  }
+  .bg-primary {
+    background-color: var(--primary);
+  }
+  .text-primary {
+    color: var(--primary);
+  }
+  .text-foreground {
+    color: var(--foreground);
+  }
+  .border-foreground {
+    border-color: #49c7ab;
+  }
+}
+
+.rsm-svg {
+  height: 600px;
+  width: 100%;
+}
+
+.slick-slide > div {
+  padding-top: 50px;  
+  padding-bottom: 50px; 
+}
